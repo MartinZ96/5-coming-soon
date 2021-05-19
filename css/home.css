@@ -10,7 +10,6 @@
 @import './components/mouse.css';
 @import './components/progress-bar.css';
 
-/* custom style */
 
 .bg-primary{
     background-color: var(--color-main);
@@ -19,8 +18,6 @@
     background-color: var(--color-secondary);
 }
 
-
-/*hero*/
 
 
 .hero {
@@ -54,8 +51,6 @@ color: var(--color-dark);
     font-size: 18px;
     color: var(--color-grey);
 }
-
-/*main*/
 
 .left-column,
 .right-column {
@@ -93,9 +88,10 @@ footer.container {
     border-bottom: 1px solid #fff;
     gap: 10px;
     flex-wrap: wrap;
+    position: relative;
 }
 
-.socials > .fa {
+.socials > .social {
     display: inline-block;
     width: 44px;
     height: 44px;
@@ -107,7 +103,13 @@ footer.container {
     text-decoration: none;
 }
 
-.socials > .fa:hover {
+.socials > .social:hover {
     background-color: var(--color-white);
     color: var(--color-main);
 }
+
+.back-to-top {
+    position: absolute;
+    top: -25px;
+    right: -10px;
+  }

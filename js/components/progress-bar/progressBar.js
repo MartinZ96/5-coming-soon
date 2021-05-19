@@ -1,23 +1,23 @@
-function progressBar(selector, data){
-
+function progressBar(selector, data) {
 
     const DOM = document.querySelector(selector);
     let HTML = '';
 
-    for (const progress of data){
+    for (const progress of data) {
         HTML += `<div class="progress-bar">
-    <div class = "top"></div>
-        <div class = "label">${progress.label}</div>
-        <div class = "value">${progress.value}</div>
-    </div>
-    <div class = "bottom">
-        <div class = "progress"></div>
-        </div>
-    </div>`;
+                    <div class="top">
+                        <div class="label">${progress.label}</div>
+                        <div class="value">${progress.value}</div>
+                    </div>
+                    <div class="bottom">
+                        <div class="progress" style="width: ${progress.value}%;">
+                            <div class="bar"></div>
+                        </div>
+                    </div>
+                </div>`;
     }
 
-
-    DOM.innerHTML = HTML;
+    DOM.insertAdjacentHTML('afterend', HTML);
 }
 
 export { progressBar }
